@@ -2,4 +2,4 @@
 ====================
 
 ### Status
-![Build Status](https://travis-ci.org/profile/nelmiux.svg?branch=dev-branch)
+![Build Status](https://magnum.travis-ci.com/nelmiux/cs371p-collatz.svg?branch=master)
