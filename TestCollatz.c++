@@ -29,11 +29,53 @@ using namespace std;
 // read
 // ----
 
-TEST(CollatzFixture, read) {
+TEST(CollatzFixture, read_1) {
     string s("1 10\n");
     const pair<int, int> p = collatz_read(s);
     ASSERT_EQ( 1, p.first);
     ASSERT_EQ(10, p.second);}
+
+TEST(CollatzFixture, read_2) {
+    string s("100 200\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 100, p.first);
+    ASSERT_EQ( 200, p.second);}
+
+TEST(CollatzFixture, read_3) {
+    string s("201 210\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 201, p.first);
+    ASSERT_EQ( 210, p.second);}
+
+TEST(CollatzFixture, read_4) {
+    string s("900 1000\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 900, p.first);
+    ASSERT_EQ( 1000, p.second);}
+
+TEST(CollatzFixture, read_5) {
+    string s("1 1\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 1, p.first);
+    ASSERT_EQ( 1, p.second);}
+
+TEST(CollatzFixture, read_6) {
+    string s("7 27\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 7, p.first);
+    ASSERT_EQ( 27, p.second);}
+
+TEST(CollatzFixture, read_7) {
+    string s("54 97\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 54, p.first);
+    ASSERT_EQ( 97, p.second);}
+
+TEST(CollatzFixture, read_8) {
+    string s("10971 13255 255\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ( 0, p.first);
+    ASSERT_EQ( 0, p.second);}
 
 // ----
 // eval
@@ -55,24 +97,104 @@ TEST(CollatzFixture, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
+TEST(CollatzFixture, eval_4) {
+    const int v = collatz_eval(1, 1);
+    ASSERT_EQ(1, v);}
+
+TEST(CollatzFixture, eval_5) {
+    const int v = collatz_eval(7, 27);
+    ASSERT_EQ(112, v);}
+   
+TEST(CollatzFixture, eval_6) {
+    const int v = collatz_eval(54, 97);
+    ASSERT_EQ(119, v);}
+ 
+TEST(CollatzFixture, eval_7) {
+    const int v = collatz_eval(10972, 13255);
+    ASSERT_EQ(276, v);}
+
+TEST(CollatzFixture, eval_8) {
+    const int v = collatz_eval(1000000, 1000000);
+    ASSERT_EQ(153, v);}
+
+TEST(CollatzFixture, eval_9) {
+    const int v = collatz_eval(-27, 7);
+    ASSERT_EQ(0, v);}
+
+TEST(CollatzFixture, eval_10) {
+    const int v = collatz_eval(0, 1);
+    ASSERT_EQ(0, v);}
+
+TEST(CollatzFixture, eval_11) {
+    const int v = collatz_eval("abcd", "ABCD");
+    ASSERT_EQ(0, v);}
+
+
 // -----
 // print
 // -----
 
-TEST(CollatzFixture, print) {
+TEST(CollatzFixture, print_1) {
     ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
+
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, 100, 200, 125);
+    ASSERT_EQ("100 200 125\n", w.str());}
+
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, 201, 210, 89);
+    ASSERT_EQ("201 210 89\n", w.str());}
+
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, 900, 1000, 174);
+    ASSERT_EQ("900 1000 174\n", w.str());}
+
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, 1, 1, 1);
+    ASSERT_EQ("1 1 1\n", w.str());}
+    
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, 912260, 188071, 525);
+    ASSERT_EQ("912260 188071 525\n", w.str());}
+
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, 210, 201, 89);
+    ASSERT_EQ("210 201 89\n", w.str());}
+   
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, -27, 7, 2);
+    ASSERT_EQ("", w.str());}
+
+TEST(CollatzFixture, print_1) {
+    ostringstream w;
+    collatz_print(w, "abcd", "ABCD", 4)
+    ASSERT_EQ("", w.str());}
+ 
 
 // -----
 // solve
 // -----
 
-TEST(CollatzFixture, solve) {
+TEST(CollatzFixture, solve_1) {
     istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
+
+TEST(CollatzFixture, solve_1) {
+    istringstream r("1 1\n912260 188071\n210 201\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 1 1\n912260 188071 525\n210 201 89\n", w.str());}
 
 /*
 % g++ -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lgtest_main -lpthread
