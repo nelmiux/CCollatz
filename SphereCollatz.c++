@@ -14,7 +14,7 @@ using namespace std;
 // collatz_read
 // ------------
 
-/**
+/*
  * read two ints
  * @param s a string
  * @return a pair of ints, representing the beginning and end of a range, [i, j]
