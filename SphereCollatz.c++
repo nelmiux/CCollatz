@@ -107,7 +107,9 @@ int collatz_length (int k) {
     return l;
 }
 
-int cache[1000000] = {0};
+#ifdef CACHE
+    int cache[1000000] = {0};
+#endif
 
 // ------------
 // collatz_eval
@@ -121,14 +123,19 @@ int collatz_eval (int i, int j) {
     int mx = 1;
     int cl = 0;
     for (int k = min(i,j); k <= max(i,j); k++) {
-        if (cache[k] != 0) cl = cache[k];
-        else {
+        #ifdef CACHE
+            if (cache[k] != 0) cl = cache[k];
+            else {
+        #endif
             cl = collatz_length(k);
+        #ifdef CACHE
             cache[k] = cl;
         }
+        #endif
         if ( cl > mx) mx = cl;
     }
-    return mx;}
+    return int(mx);}
+
 
 // -------------
 // collatz_print
