@@ -17,7 +17,6 @@
 #include "Collatz.h"
 
 using namespace std;
-#define CACHE_SIZE 1000000
 
 // ------------
 // collatz_read
@@ -59,8 +58,9 @@ int collatz_length (int k) {
     return l;
 }
 
-
-int cache[1000000] = {0};
+#ifdef CACHE
+    int cache[1000000] = {0};
+#endif
 
 // ------------
 // collatz_eval
@@ -74,11 +74,15 @@ int collatz_eval (int i, int j) {
     uint64_t mx = 1;
     uint64_t cl = 0;
     for (uint64_t k = uint64_t(min(i,j)); k <= uint64_t(max(i,j)); k++) {
-        if (cache[k] != 0) cl = cache[k];
-        else {
+        #ifdef CACHE
+            if (cache[k] != 0) cl = cache[k];
+            else {
+        #endif
             cl = collatz_length(k);
+        #ifdef CACHE
             cache[k] = cl;
         }
+        #endif
         if ( cl > mx) mx = cl;
     }
     return int(mx);}
