@@ -69,6 +69,10 @@ int main () {
     return 0;}
 
 
+// ------------
+// collatz_read
+// ------------
+
 pair<int, int> collatz_read (const string& s) {
     /*read s, a string
     return a pair of two ints, representing the beginning and end of a range, [i, j]*/
@@ -78,7 +82,6 @@ pair<int, int> collatz_read (const string& s) {
     try {
         sin >> i >> j;
         int k;
-        if ((sin >> k) != NULL) return make_pair(0, 0);
     } 
     catch (...) {
         return make_pair(0, 0);
@@ -89,14 +92,14 @@ pair<int, int> collatz_read (const string& s) {
 // collatz_length
 // ------------
 
-int collatz_length (int n) {
+int collatz_length (int k) {
     /* calculate the cycle length of n
     return the cycle length of an integer n */
     int l = 1;
-    while (n != 1) {
-        if (n % 2 == 0) n = n / 2;
+    while (k != 1) {
+        if (!(k % 2)) k = k >> 1;
         else {
-            n = (3 * n + 1) / 2;
+            k = (3 * k + 1) >> 1;
             l += 1;
         }
         l += 1;
@@ -127,7 +130,7 @@ int collatz_eval (int i, int j) {
 // -------------
 
 void collatz_print (ostream& w, int i, int j, int v) {
-    if ((i < 1) || (j < 1) || (v < 1) || (w == NULL))
+    if ((i < 1) || (j < 1) || (v < 1))
         w << "";
     else 
         w << i << " " << j << " " << v << endl;}
