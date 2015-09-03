@@ -13,11 +13,11 @@
 #include <sstream>  // istringstream
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
-#include <climits>
 
 #include "Collatz.h"
 
 using namespace std;
+#define CACHE_SIZE 1000000
 
 // ------------
 // collatz_read
@@ -60,6 +60,8 @@ int collatz_length (int k) {
 }
 
 
+int cache[1000000] = {0};
+
 // ------------
 // collatz_eval
 // ------------
@@ -72,10 +74,15 @@ int collatz_eval (int i, int j) {
     uint64_t mx = 1;
     uint64_t cl = 0;
     for (uint64_t k = uint64_t(min(i,j)); k <= uint64_t(max(i,j)); k++) {
-        cl = collatz_length(k);
+        if (cache[k] != 0) cl = cache[k];
+        else {
+            cl = collatz_length(k);
+            cache[k] = cl;
+        }
         if ( cl > mx) mx = cl;
     }
     return int(mx);}
+
 
 // -------------
 // collatz_print
