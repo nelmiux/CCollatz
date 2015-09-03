@@ -1,0 +1,182 @@
+commit e5060ac0e7b63684c8ee891fc27fb9c3156644b5
+Author: nelmiux <npererar@utexas.edu>
+Date:   Thu Sep 3 00:04:56 2015 -0500
+
+    Fixed
+
+commit fd18dbc9af258540cbdb8281a2b29a887fdd4889
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 23:59:34 2015 -0500
+
+    Documentation Added
+
+commit c18c43d47c03af75321716135eb0296b3a0846f1
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 23:27:20 2015 -0500
+
+    Accepted  by Sphere After Cache and ifdef
+
+commit 93e276c2ed197ca97e432c3931bbb10ef884803d
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 23:23:39 2015 -0500
+
+    Cache Feature Tagging Added
+
+commit 025bf56cad196269d2643ad4835057fd31375dd3
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 22:30:56 2015 -0500
+
+    closes #24, Cache Implemented
+
+commit db6779ed7ea3844e399d5488f72848cf0b131361
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 21:13:28 2015 -0500
+
+    closes #20, closes #21
+
+commit 502346eaa797776b5e4a643209a8035909f281ba
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 21:11:52 2015 -0500
+
+    closes #19
+
+commit 5e49c565dc3c07805597c4e8ac1da4056b0ca2e2
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 20:50:47 2015 -0500
+
+    closes #21
+
+commit 2aca8fa11b2799550e820e3269f7e5cddd536c56
+Author: nelmiux <npererar@utexas.edu>
+Date:   Wed Sep 2 20:33:29 2015 -0500
+
+    closes #23
+
+commit 4976cc83b6ea4d19fa1402684c4d42ffebfd28e4
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Wed Sep 2 20:27:32 2015 -0500
+
+    Closes #19
+
+commit 5730c83713df030bc2d55bc757dd92aff7597b4d
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Tue Sep 1 23:21:44 2015 -0500
+
+    Simple Possible Solution Implementation, Close Issue #18
+
+commit 435493d1c50ce6d2d5632efe49445b285174a093
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 23:06:27 2015 -0500
+
+    Adding the File Accepted by Sphere, Close Issue #19
+
+commit 7d1fa055de394219741d83500961e3029fbbb842
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 22:56:54 2015 -0500
+
+    Simple Possible Solution Implementation
+
+commit 0ffa03b9854d4aaeff09cad04648e5482db050a0
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 20:12:32 2015 -0500
+
+    More than an average of 3 tests for each function added
+
+commit 3da4e9b4c9c374ede22603aed3d6c9691a25d3fb
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 19:17:10 2015 -0500
+
+    Unittest Fixed with correct data, Test Failing Now
+
+commit c038c56da0f54ca37ce2a275b697ea6816c22068
+Merge: ebf290a 0ef9fcd
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Tue Sep 1 19:04:20 2015 -0500
+
+    Merge pull request #15 from nelmiux/dev
+    
+    Merging
+
+commit ebf290a0989a2adadabb452a16a4e50a3157db3a
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Tue Sep 1 18:59:35 2015 -0500
+
+    Update README.md
+
+commit 8bf2b1e45dae28060f841fffd745102920a7b465
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Tue Sep 1 18:58:39 2015 -0500
+
+    Update README.md
+
+commit 0ef9fcd714644f3a7838e1d4f12cd87b5e8e921e
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 18:50:22 2015 -0500
+
+    Preparing Makefile
+
+commit d589a353ab79b73506e9c5990dbcaeeb5b7c870b
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 18:44:40 2015 -0500
+
+    Initial Build
+
+commit dd581d6de15dd528e39ba69dd16ec6b2dd5e8160
+Author: nelmiux <npererar@utexas.edu>
+Date:   Tue Sep 1 12:50:29 2015 -0500
+
+    Initial Files
+
+commit 54f9ba38c1494134a9439e233b740ba51e564516
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:39:33 2015 -0500
+
+    Update README.md
+
+commit 99c8b580f4588160be7a72b799ae85ec544b183f
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:35:40 2015 -0500
+
+    Update README.md
+
+commit e61f1cba2677c44092199aaa34dd9b3195af4cb2
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:35:06 2015 -0500
+
+    Update README.md
+
+commit fc0695cd24ae6c5a2db4d8131f23d3eb14f6af25
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:34:23 2015 -0500
+
+    Update README.md
+
+commit 42a3c67699813def88d94342f4e29183de430bf3
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:33:23 2015 -0500
+
+    Update README.md
+
+commit dd006030dd458fc9996a18fd1d50895e68dc14ae
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:30:57 2015 -0500
+
+    Create .travis.yml
+
+commit c3a895e78b6c0b697ab38046ce454f625f16baa6
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:27:47 2015 -0500
+
+    Update README.md
+
+commit 1696408dd19cecc0052f8e2bc2c4fdc33eca0710
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:21:59 2015 -0500
+
+    Update README.md
+
+commit d5c7f4ac4fd21aab205c1d7dcfd55195914be5e9
+Author: Nelma Perera <npererar@utexas.edu>
+Date:   Mon Aug 31 21:14:55 2015 -0500
+
+    Initial commit
