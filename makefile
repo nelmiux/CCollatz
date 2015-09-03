@@ -6,7 +6,7 @@ FILES :=                              \
     TestCollatz.out 				  \
     Collatz.c++                       \
     Collatz.h                         \
-    #Collatz.log                       \
+    Collatz.log                       \
     html                              \
     RunCollatz.c++                    \
     RunCollatz.in                     \
