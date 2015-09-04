@@ -110,8 +110,8 @@ TEST(CollatzFixture, eval_7) {
     ASSERT_EQ(119, v);}
  
 TEST(CollatzFixture, eval_8) {
-    const int v = collatz_eval(10972, 13255);
-    ASSERT_EQ(276, v);}
+    const int v = collatz_eval(113384, 134378);
+    ASSERT_EQ(349, v);}
 
 TEST(CollatzFixture, eval_9) {
     const int v = collatz_eval(1000000, 1000000);
@@ -157,8 +157,8 @@ TEST(CollatzFixture, print_5) {
     
 TEST(CollatzFixture, print_6) {
     ostringstream w;
-    collatz_print(w, 912260, 188071, 525);
-    ASSERT_EQ("912260 188071 525\n", w.str());}
+    collatz_print(w, 113384, 134378, 349);
+    ASSERT_EQ("113384 134378 349\n", w.str());}
 
 TEST(CollatzFixture, print_7) {
     ostringstream w;
@@ -182,10 +182,10 @@ TEST(CollatzFixture, solve_1) {
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
 
 TEST(CollatzFixture, solve_2) {
-    istringstream r("1 1\n912260 188071\n210 201\n");
+    istringstream r("1 1\n525160 531182\n210 201\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 1 1\n912260 188071 525\n210 201 89\n", w.str());}
+    ASSERT_EQ("1 1 1\n525160 531182 408\n210 201 89\n", w.str());}
 
 /*
 % g++ -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lgtest_main -lpthread
