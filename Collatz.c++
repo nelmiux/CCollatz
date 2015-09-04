@@ -13,6 +13,7 @@
 #include <sstream>  // istringstream
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
+#include <inttypes.h>
 
 #include "Collatz.h"
 
@@ -45,12 +46,12 @@ pair<int, int> collatz_read (const string& s) {
 int collatz_length (int k) {
     /* calculate the cycle length of n
     return the cycle length of an integer n */
-    uint64_t l = 1;
-    uint64_t un_k = uint64_t(k);
+    uint64_t  l = 1;
+    uint64_t  un_k = k;
     while (un_k != 1) {
         if (!(un_k % 2)) un_k = un_k >> 1;
         else {
-            un_k = (3 * un_k + 1) >> 1;
+            un_k = (un_k + (un_k<<1) + 1) >> 1;
             l += 1;
         }
         l += 1;
@@ -73,7 +74,7 @@ int collatz_eval (int i, int j) {
     if (i == j) return collatz_length(i);
     uint64_t mx = 1;
     uint64_t cl = 0;
-    for (uint64_t k = uint64_t(min(i,j)); k <= uint64_t(max(i,j)); k++) {
+    for (int k = int(min(i,j)); k <= int(max(i,j)); k++) {
         #ifdef CACHE
             if (cache[k] != 0) cl = cache[k];
             else {
