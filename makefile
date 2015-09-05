@@ -1,9 +1,9 @@
 FILES :=                              \
     .travis.yml                       \
-    RunCollatz.in                     \
-    RunCollatz.out                    \
-    TestCollatz.c++                   \
-    TestCollatz.out                   \
+    collatz-tests/np8259-RunCollatz.in   \
+    collatz-tests/np8259-RunCollatz.out  \
+    collatz-tests/np8259-TestCollatz.c++ \
+    collatz-tests/np8259-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \
