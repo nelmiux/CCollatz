@@ -71,11 +71,6 @@ TEST(CollatzFixture, read_7) {
     ASSERT_EQ( 54, p.first);
     ASSERT_EQ( 97, p.second);}
 
-TEST(CollatzFixture, read_8) {
-    string s("10971 13255 255\n");
-    const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ( 0, p.first);
-    ASSERT_EQ( 0, p.second);}
 
 // ----
 // eval
@@ -117,15 +112,6 @@ TEST(CollatzFixture, eval_9) {
     const int v = collatz_eval(1000000, 1000000);
     ASSERT_EQ(153, v);}
 
-TEST(CollatzFixture, eval_10) {
-    const int v = collatz_eval(-27, 7);
-    ASSERT_EQ(0, v);}
-
-TEST(CollatzFixture, eval_11) {
-    const int v = collatz_eval(0, 1);
-    ASSERT_EQ(0, v);}
-
-
 // -----
 // print
 // -----
@@ -164,11 +150,6 @@ TEST(CollatzFixture, print_7) {
     ostringstream w;
     collatz_print(w, 210, 201, 89);
     ASSERT_EQ("210 201 89\n", w.str());}
-   
-TEST(CollatzFixture, print_8) {
-    ostringstream w;
-    collatz_print(w, -27, 7, 2);
-    ASSERT_EQ("", w.str());}
 
 
 // -----

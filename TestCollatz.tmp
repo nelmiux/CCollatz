@@ -1,93 +1,85 @@
-==2744== Memcheck, a memory error detector
-==2744== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
-==2744== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
-==2744== Command: ./TestCollatz
-==2744== 
+==3572== Memcheck, a memory error detector
+==3572== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==3572== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==3572== Command: ./TestCollatz
+==3572== 
 Running main() from gtest_main.cc
-[==========] Running 29 tests from 1 test case.
+[==========] Running 25 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 29 tests from CollatzFixture
+[----------] 25 tests from CollatzFixture
 [ RUN      ] CollatzFixture.read_1
-[       OK ] CollatzFixture.read_1 (139 ms)
+[       OK ] CollatzFixture.read_1 (47 ms)
 [ RUN      ] CollatzFixture.read_2
-[       OK ] CollatzFixture.read_2 (19 ms)
+[       OK ] CollatzFixture.read_2 (7 ms)
 [ RUN      ] CollatzFixture.read_3
-[       OK ] CollatzFixture.read_3 (18 ms)
+[       OK ] CollatzFixture.read_3 (6 ms)
 [ RUN      ] CollatzFixture.read_4
-[       OK ] CollatzFixture.read_4 (11 ms)
+[       OK ] CollatzFixture.read_4 (5 ms)
 [ RUN      ] CollatzFixture.read_5
-[       OK ] CollatzFixture.read_5 (11 ms)
+[       OK ] CollatzFixture.read_5 (6 ms)
 [ RUN      ] CollatzFixture.read_6
-[       OK ] CollatzFixture.read_6 (11 ms)
+[       OK ] CollatzFixture.read_6 (6 ms)
 [ RUN      ] CollatzFixture.read_7
-[       OK ] CollatzFixture.read_7 (14 ms)
-[ RUN      ] CollatzFixture.read_8
-[       OK ] CollatzFixture.read_8 (22 ms)
+[       OK ] CollatzFixture.read_7 (5 ms)
 [ RUN      ] CollatzFixture.eval_1
-[       OK ] CollatzFixture.eval_1 (30 ms)
+[       OK ] CollatzFixture.eval_1 (9 ms)
 [ RUN      ] CollatzFixture.eval_2
-[       OK ] CollatzFixture.eval_2 (10 ms)
+[       OK ] CollatzFixture.eval_2 (5 ms)
 [ RUN      ] CollatzFixture.eval_3
-[       OK ] CollatzFixture.eval_3 (6 ms)
+[       OK ] CollatzFixture.eval_3 (3 ms)
 [ RUN      ] CollatzFixture.eval_4
-[       OK ] CollatzFixture.eval_4 (5 ms)
+[       OK ] CollatzFixture.eval_4 (3 ms)
 [ RUN      ] CollatzFixture.eval_5
-[       OK ] CollatzFixture.eval_5 (13 ms)
+[       OK ] CollatzFixture.eval_5 (4 ms)
 [ RUN      ] CollatzFixture.eval_6
-[       OK ] CollatzFixture.eval_6 (9 ms)
+[       OK ] CollatzFixture.eval_6 (4 ms)
 [ RUN      ] CollatzFixture.eval_7
-[       OK ] CollatzFixture.eval_7 (14 ms)
+[       OK ] CollatzFixture.eval_7 (3 ms)
 [ RUN      ] CollatzFixture.eval_8
-[       OK ] CollatzFixture.eval_8 (448 ms)
+[       OK ] CollatzFixture.eval_8 (130 ms)
 [ RUN      ] CollatzFixture.eval_9
-[       OK ] CollatzFixture.eval_9 (19 ms)
-[ RUN      ] CollatzFixture.eval_10
-[       OK ] CollatzFixture.eval_10 (18 ms)
-[ RUN      ] CollatzFixture.eval_11
-[       OK ] CollatzFixture.eval_11 (8 ms)
+[       OK ] CollatzFixture.eval_9 (3 ms)
 [ RUN      ] CollatzFixture.print_1
-[       OK ] CollatzFixture.print_1 (58 ms)
+[       OK ] CollatzFixture.print_1 (22 ms)
 [ RUN      ] CollatzFixture.print_2
-[       OK ] CollatzFixture.print_2 (15 ms)
+[       OK ] CollatzFixture.print_2 (5 ms)
 [ RUN      ] CollatzFixture.print_3
-[       OK ] CollatzFixture.print_3 (15 ms)
+[       OK ] CollatzFixture.print_3 (7 ms)
 [ RUN      ] CollatzFixture.print_4
-[       OK ] CollatzFixture.print_4 (18 ms)
+[       OK ] CollatzFixture.print_4 (20 ms)
 [ RUN      ] CollatzFixture.print_5
-[       OK ] CollatzFixture.print_5 (18 ms)
+[       OK ] CollatzFixture.print_5 (11 ms)
 [ RUN      ] CollatzFixture.print_6
-[       OK ] CollatzFixture.print_6 (11 ms)
+[       OK ] CollatzFixture.print_6 (10 ms)
 [ RUN      ] CollatzFixture.print_7
-[       OK ] CollatzFixture.print_7 (11 ms)
-[ RUN      ] CollatzFixture.print_8
-[       OK ] CollatzFixture.print_8 (20 ms)
+[       OK ] CollatzFixture.print_7 (7 ms)
 [ RUN      ] CollatzFixture.solve_1
-[       OK ] CollatzFixture.solve_1 (26 ms)
+[       OK ] CollatzFixture.solve_1 (40 ms)
 [ RUN      ] CollatzFixture.solve_2
-[       OK ] CollatzFixture.solve_2 (74 ms)
-[----------] 29 tests from CollatzFixture (1267 ms total)
+[       OK ] CollatzFixture.solve_2 (140 ms)
+[----------] 25 tests from CollatzFixture (577 ms total)
 
 [----------] Global test environment tear-down
-[==========] 29 tests from 1 test case ran. (1520 ms total)
-[  PASSED  ] 29 tests.
-==2744== 
-==2744== HEAP SUMMARY:
-==2744==     in use at exit: 0 bytes in 0 blocks
-==2744==   total heap usage: 1,266 allocs, 1,266 frees, 120,649 bytes allocated
-==2744== 
-==2744== All heap blocks were freed -- no leaks are possible
-==2744== 
-==2744== For counts of detected and suppressed errors, rerun with: -v
-==2744== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[==========] 25 tests from 1 test case ran. (670 ms total)
+[  PASSED  ] 25 tests.
+==3572== 
+==3572== HEAP SUMMARY:
+==3572==     in use at exit: 0 bytes in 0 blocks
+==3572==   total heap usage: 1,132 allocs, 1,132 frees, 112,421 bytes allocated
+==3572== 
+==3572== All heap blocks were freed -- no leaks are possible
+==3572== 
+==3572== For counts of detected and suppressed errors, rerun with: -v
+==3572== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 File 'Collatz.c++'
-Lines executed:94.74% of 38
-Branches executed:96.67% of 60
-Taken at least once:65.00% of 60
-Calls executed:84.85% of 33
+Lines executed:94.87% of 39
+Branches executed:100.00% of 54
+Taken at least once:61.11% of 54
+Calls executed:82.14% of 28
 Creating 'Collatz.c++.gcov'
 File 'TestCollatz.c++'
-Lines executed:100.00% of 115
-Branches executed:60.11% of 742
-Taken at least once:30.05% of 742
-Calls executed:53.08% of 861
+Lines executed:100.00% of 100
+Branches executed:60.37% of 646
+Taken at least once:30.19% of 646
+Calls executed:53.14% of 749
 Creating 'TestCollatz.c++.gcov'
