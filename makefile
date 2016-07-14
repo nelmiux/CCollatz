@@ -1,9 +1,5 @@
 FILES :=                              \
     .travis.yml                       \
-    collatz-tests/np8259-RunCollatz.in   \
-    collatz-tests/np8259-RunCollatz.out  \
-    collatz-tests/np8259-TestCollatz.c++ \
-    collatz-tests/np8259-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \
@@ -69,9 +65,6 @@ status:
 	git status
 
 test: RunCollatz.tmp TestCollatz.tmp
-
-collatz-tests:
-	git clone https://github.com/cs371p-fall-2015/collatz-tests.git
 
 html: Doxyfile Collatz.h Collatz.c++ RunCollatz.c++ TestCollatz.c++
 	doxygen Doxyfile
