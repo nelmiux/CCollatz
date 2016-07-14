@@ -1,1 +1,1 @@
-# CS371p Collatz
+# Collatz
